@@ -20,6 +20,11 @@
   margin-left: 16px;
 }
 
+.pesquisar button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
 .lista-cards {
   display: flex;
   justify-content: space-around;
