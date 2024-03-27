@@ -1,3 +1,5 @@
+@import '../../assets/styles/mixins';
+
 .home {
   display: flex;
   justify-content: space-around;
@@ -6,23 +8,24 @@
   flex-direction: column;
 }
 
-.pesquisar input {
-  height: 42px;
-  width: 250px;
-  border-radius: 8px;
-  border: 1px solid black;
-}
+.pesquisar {
+  input {
+    height: 42px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid black;
+  }
 
-.pesquisar button {
-  height: 42px;
-  border-radius: 8px;
-  font-weight: 600;
-  margin-left: 16px;
-}
+  button {
+    height: 42px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-left: 16px;
 
-.pesquisar button:hover {
-  scale: 1.1;
-  cursor: pointer;
+    &:hover {
+      @include hover;
+    }
+  }
 }
 
 .lista-cards {

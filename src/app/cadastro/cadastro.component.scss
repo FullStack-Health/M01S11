@@ -1,48 +1,46 @@
+@import '../../assets/styles/mixins';
+
 .cadastro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-}
+  @include d-flex-center;
 
-.cadastro form {
-  border: 1px solid;
-  border-radius: 6px;
-  margin: 10%;
-  padding: 22px 32px;
-  box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-  -moz-box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-}
+  form {
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 10%;
+    padding: 22px 32px;
+    @include box-shadow;
 
-.cadastro form .elemento-formulario {
-  display: flex;
-  flex-direction: column;
-}
+    .elemento-formulario {
+      display: flex;
+      flex-direction: column;
 
-.cadastro form .elemento-formulario + .elemento-formulario {
-  margin-top: 8px;
-}
+      & + .elemento-formulario {
+        margin-top: 8px;
+      }
+    }
 
-.cadastro form .botoes-formulario {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-around;
-}
+    .botoes-formulario {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-around;
 
-.cadastro form .botoes-formulario button {
-  height: 24px;
-  width: 72px;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 4px;
-}
+      button {
+        height: 24px;
+        width: 72px;
+        cursor: pointer;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 4px;
 
-.cadastro form .botoes-formulario button:hover {
-  scale: 1.1;
-}
+        &:hover {
+          @include hover;
+        }
 
-.cadastro form .botoes-formulario .entrar {
-  background-color: lightblue;
+        .entrar {
+          background-color: lightblue;
+        }
+      }
+    }
+  }
 }

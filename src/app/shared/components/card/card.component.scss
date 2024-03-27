@@ -1,20 +1,18 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+
 .card {
-  border: 1px solid darkblue;
+  border: 1px solid $colorPrimary;
   border-radius: 6px;
   padding: 16px 8px;
   width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-  -moz-box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-}
+  @include box-shadow;
+  @include d-flex-center;
 
-.card:hover {
-  scale: 1.1;
-  cursor: pointer;
+  &:hover {
+    @include hover;
+  }
 }
 
 img {

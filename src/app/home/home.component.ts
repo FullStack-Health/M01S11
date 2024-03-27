@@ -13,27 +13,27 @@ import { SharedModule } from '../shared/shared.module';
 export class HomeComponent {
   listaProdutos = [
     {
-      imagem: 'assets/banana.jpg',
+      imagem: 'assets/images/banana.jpg',
       descricao: 'Banana'
     },
     {
-      imagem: 'assets/abacate.jpg',
+      imagem: 'assets/images/abacate.jpg',
       descricao: 'Abacate'
     },
     {
-      imagem: 'assets/maca.jpg',
+      imagem: 'assets/images/maca.jpg',
       descricao: 'Maça'
     },
     {
-      imagem: 'assets/mamao.jpg',
+      imagem: 'assets/images/mamao.jpg',
       descricao: 'Mamão'
     },
     {
-      imagem: 'assets/pera.jpg',
+      imagem: 'assets/images/pera.jpg',
       descricao: 'Pera'
     },
     {
-      imagem: 'assets/uva.jpg',
+      imagem: 'assets/images/uva.jpg',
       descricao: 'Uva'
     }
   ];
