@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrl: './card.component.scss'
 })
 export class CardComponent {
   @Input() item: { imagem: string; descricao: string; } | undefined;

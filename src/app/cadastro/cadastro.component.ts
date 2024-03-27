@@ -6,7 +6,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [ReactiveFormsModule], //Importação do Modulo de Reative Forms
   templateUrl: './cadastro.component.html',
-  styleUrl: './cadastro.component.css'
+  styleUrl: './cadastro.component.scss'
 })
 export class CadastroComponent {
   form = new FormGroup({

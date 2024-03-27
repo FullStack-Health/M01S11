@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [FormsModule], //Importação do Modulo de Template Driven
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   login = {
