@@ -1,36 +1,93 @@
 <div class="cadastro">
   <form (ngSubmit)="cadastrar()" [formGroup]="form"> <!-- Vinculo ao form group -->
     <div class="elemento-formulario">
-      <label for="nome">Nome</label>
+      <label for="nome">Nome *</label>
       <input
         type="text"
         name="nome"
         formControlName="nome"
         >
+        <span
+          *ngIf="(form.controls.nome.dirty ||
+            form.controls.nome.touched) &&
+            form.controls.nome.errors &&
+            form.controls.nome.errors['required']"
+        >
+          Preenchimento obrigatório
+        </span>
     </div>
     <div class="elemento-formulario">
-      <label for="codigoUsuario">Código Usuário</label>
+      <label for="codigoUsuario">Código Usuário *</label>
       <input
         type="text"
         name="codigoUsuario"
         formControlName="codigoUsuario"
         >
+        <span
+          *ngIf="form.controls.codigoUsuario.dirty &&
+          form.controls.codigoUsuario.touched &&
+          form.controls.codigoUsuario.errors &&
+          (form.controls.codigoUsuario.errors['minlength'] ||
+          form.controls.codigoUsuario.errors['maxLength'])"
+        >
+          O código precisa ter entre 5 e 10 caracteres
+        </span>
+        <span
+          *ngIf="form.controls.codigoUsuario.dirty &&
+          form.controls.codigoUsuario.touched &&
+          form.controls.codigoUsuario.errors &&
+          form.controls.codigoUsuario.errors['required']"
+        >
+          Preenchimento obrigatório
+        </span>
     </div>
     <div class="elemento-formulario">
-      <label for="senha">Senha</label>
+      <label for="senha">Senha *</label>
       <input
         type="password"
         name="senha"
         formControlName="senha"
         >
+        <span
+          *ngIf="form.controls.senha.dirty &&
+          form.controls.senha.touched &&
+          form.controls.senha.errors &&
+          form.controls.senha.errors['minlength']"
+        >
+          A senha deve conter ao menos 4 caracteres
+        </span>
+        <span
+          *ngIf="form.controls.senha.dirty &&
+          form.controls.senha.touched &&
+          form.controls.senha.errors &&
+          form.controls.senha.errors['required']"
+        >
+          Preenchimento obrigatório
+        </span>
     </div>
     <div class="elemento-formulario">
-      <label for="confirmarSenha">Confirmar Senha</label>
+      <label for="confirmarSenha">Confirmar Senha *</label>
       <input
         type="password"
         name="confirmarSenha"
         formControlName="confirmarSenha"
         >
+        <span
+          *ngIf="form.controls.confirmarSenha.dirty &&
+          form.controls.confirmarSenha.touched &&
+          form.controls.confirmarSenha.errors &&
+          form.controls.confirmarSenha.errors['minlength']"
+        >
+          A senha deve conter ao menos 4 caracteres
+        </span>
+        <span
+          *ngIf="form.controls.confirmarSenha.dirty &&
+          form.controls.confirmarSenha.touched &&
+          form.controls.confirmarSenha.errors &&
+          form.controls.confirmarSenha.errors['required']"
+        >
+          Preenchimento obrigatório
+        </span>
     </div>
     <div class="botoes-formulario">
       <button class="entrar" type="submit">Cadastrar</button>
