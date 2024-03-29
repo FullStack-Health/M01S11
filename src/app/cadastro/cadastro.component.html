@@ -1,7 +1,12 @@
 <div class="cadastro">
   <form (ngSubmit)="cadastrar()" [formGroup]="form"> <!-- Vinculo ao form group -->
-    <div class="elemento-formulario">
-      <label for="nome">Nome *</label>
+    <div
+      class="elemento-formulario"
+      [ngClass]="{'erro-formulario': (form.controls.nome.dirty ||
+        form.controls.nome.touched) &&
+        form.controls.nome.errors}"
+    >
+      <label for="nome">Nome completo *</label>
       <input
         type="text"
         name="nome"
@@ -14,6 +19,14 @@
             form.controls.nome.errors['required']"
         >
           Preenchimento obrigatório
+        </span>
+        <span
+          *ngIf="(form.controls.nome.dirty ||
+            form.controls.nome.touched) &&
+            form.controls.nome.errors &&
+            form.controls.nome.errors['validaNomeCompleto']"
+        >
+          Por favor, insira seu nome completo
         </span>
     </div>
     <div class="elemento-formulario">

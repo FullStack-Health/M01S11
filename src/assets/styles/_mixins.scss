@@ -14,3 +14,13 @@
   scale: 1.1;
   cursor: pointer;
 }
+
+@mixin erro-control {
+  label, span {
+    color: red;
+  }
+
+  input {
+    border-color: red;
+  }
+}

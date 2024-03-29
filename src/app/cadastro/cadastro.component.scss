@@ -20,6 +20,16 @@
       }
     }
 
+    .erro-formulario {
+      label, span {
+        color: red;
+      }
+
+      input {
+        border-color: red;
+      }
+    }
+
     .botoes-formulario {
       margin-top: 16px;
       display: flex;
