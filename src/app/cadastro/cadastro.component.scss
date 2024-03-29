@@ -34,23 +34,6 @@
       margin-top: 16px;
       display: flex;
       justify-content: space-around;
-
-      button {
-        height: 24px;
-        width: 72px;
-        cursor: pointer;
-        background-color: white;
-        border: 1px solid black;
-        border-radius: 4px;
-
-        &:hover {
-          @include hover;
-        }
-
-        .entrar {
-          background-color: lightblue;
-        }
-      }
     }
   }
 }
